@@ -431,7 +431,7 @@ ul li .homebtn:first-child{
     background: linear-gradient(
         to top,
         black,
-        rgba(255, 0, 0, 0)
+        rgba(0, 0, 0, 0)
       );
 }
     .image_content .bgImage{
