@@ -1,0 +1,383 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    background: black;
+}
+
+
+.nav-links{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links li a{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+
+.nav-links li a:hover{
+    color: #EE9A00;
+}
+
+ul li .homebtn:first-child{
+    color: #EE9A00;
+}
+
+.instagram{
+    text-decoration: none;
+}
+
+.branding{
+    display: flex;
+    width: 20%;
+    height: 100%;
+    align-items: center;
+    margin-right: auto;
+}
+
+.tuddleLogo{
+    height: 50px;
+    width: 50px;
+    margin-left: 10%;
+}
+
+.brandName{
+    letter-spacing: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 18px;
+}
+
+/*CONTENT*/
+.landing{
+    display: inline;
+}
+
+.image_content{
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background: #000;
+    overflow: hidden;
+}
+
+.image_content .gradient{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(
+        to top,
+        black,
+        rgba(255, 0, 0, 0)
+      );
+}
+
+.image_content .bgImage{
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/tskills.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: photo 8s ease;
+}
+
+.introduction{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    min-height: 600px;
+    align-items: center;
+}
+
+.intro_text{
+    display: flex;
+}
+
+.intro_text .con1{
+    width: 50%;
+    margin-left: 4%;
+}
+
+.intro_text .con2{
+    width: 50%;
+}
+
+.intro_text h1{
+    color: #EE9A00;
+    font-size: 40px;
+    animation: drop 2s ease;
+}
+
+.intro_text h2{
+    color: #fff;
+    font-size: 24px;
+    animation: drop 2s ease;
+}
+
+.intro_text .instagram1{
+    display: flex;
+    text-align: center;
+    margin-top: 2%;
+    animation: drop 2s ease;
+}
+
+.intro_text .instagram1 img{
+    width: 4%;
+    height: 4%;
+}
+
+.intro_text .instagram1 h3{
+    color: #fff;
+}
+
+.endPage{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.endPage p{
+    position: relative;
+    top: 50%;
+    color: #EE9A00;
+    transform: translateY(100%);
+    font-size: 20px;
+}
+
+.endPage img{
+    width: 20%;
+}
+
+.endPage .socialTags{
+    position: relative;
+    top: 50%;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 10px;
+    transform: translateY(5%);
+}
+/*TEXTBOX*/
+.wrapper{
+    max-width: 550px;
+    border-radius: 20px;
+    margin-right: 100px;
+    background: rgb(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    padding: 40px;
+    color: #fff;
+    animation: drop 2s ease;
+}
+
+.wrapper h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+input[type=text],input[type=password],input[type=email]{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+input[type=submit]{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 0;
+    margin-top: 30px;
+    outline: none;
+    background: #EE9A00;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+@keyframes photo{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes drop{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/*Web browser Sizes*/
+@media screen and (max-width: 1024px){
+    .line{
+        width: 30px;
+        height: 3px;
+        background-color: #EE9A00;
+        margin: 5px;
+    }
+    .nav{
+        position: relative;
+    }
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 5%;
+        z-index: 8;
+        transform: translate(-5%, -50%);
+    }
+    .nav-links{
+        position: fixed;
+        background: #000;
+        height: 100vh;
+        width: 100%;
+        margin-bottom: 80px;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -20%);
+        -webkit-clip-path: circle(100px at 90% -20%);
+        transition: all 1s ease-out;
+        z-index: 6;
+    }
+    .nav-links.open{
+        clip-path: circle(3000px at 90% -20%);
+        -webkit-clip-path: circle(3000px at 90% -20%);
+    }
+    .brandName{
+        letter-spacing: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: aliceblue;
+        font-size: 16px;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 5px;
+        margin-left: 18px;
+    }
+    /*CONTENT*/
+.image_content{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+.image_content .gradient{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: linear-gradient(
+        to top,
+        black,
+        rgba(255, 0, 0, 0)
+      );
+}
+    .image_content .bgImage{
+        width: 100%;
+        background-image: url(../images/tskills.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: photo 2s ease;
+    }
+    .introduction{
+        position: absolute;
+        top: 5%;
+        left: 0%;
+        display: inline-block;
+        width: 100%;
+        margin: auto;
+        min-height: 380px;
+        align-items: center;
+    }
+
+    .wrapper{
+        max-width: 300px;
+        border-radius: 20px;
+        background: rgb(0, 0, 0, 0.7);
+        margin: auto;
+        box-sizing: border-box;
+        padding: 40px;
+        color: #fff;
+        animation: drop 2s ease;
+    }
+    
+    .intro_text{
+        display: flex;
+        margin-bottom: 8%;
+    }
+    
+    .intro_text .con1{
+        width: 90%;
+        margin-left: 4%;
+    }
+    
+    .intro_text .con2{
+        width: 10%;
+    }
+    
+    .intro_text h1{
+        color: #EE9A00;
+        font-size: 20px;
+        animation: drop 2s ease;
+    }
+    
+    .intro_text h2{
+        color: #fff;
+        font-size: 12px;
+        animation: drop 2s ease;
+    }
+    /**/
+    .child_container{
+        position: absolute;
+        margin-top: 13.4%;
+        background: #EE9A00;
+    }
+
+}
