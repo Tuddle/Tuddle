@@ -68,13 +68,11 @@
                 </div>
             </div>
         </footer>
-        <script src="app.js" type="text/javascript"></script>
-                <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+                        <!-- The core Firebase JS SDK is always required and must be listed first -->
+                        <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
 
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-
+                        <!-- TODO: Add SDKs for Firebase products that you want to use
+                        https://firebase.google.com/docs/web/setup#available-libraries -->
     <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
@@ -89,14 +87,21 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     //DATABASE CONNECTION
-    var con = firebase.auth();
+    const auth = firebase.auth;
+    </script>
+    <script type="text/javascript">
     const signupform = document.querySelector("#signupform");
     //Get data from forms
     signupform.addEventListener('submit',(e)=>{
         e.preventDefault();
+        const email = signupform["emailbox"].value;
+        const password = signupform["passwordbox"].value;
+        auth.createUserWithEmailAndPassowrd(email,password).then(cred => {
+            console.log(cred);
+        });
 
-        console.log();
     });
     </script>
+    <script src="app.js" type="text/javascript"></script>
     </body>
 </html>
