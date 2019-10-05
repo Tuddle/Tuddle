@@ -95,6 +95,8 @@
         auth.createUserWithEmailAndPassword(email,password).then(cred => {
             alert("Thank you for creating an early bird account for Tuddle!");
             console.log(cred);
+        }).catch((error)=>{
+            alert(error.message);
         });
 
     });
