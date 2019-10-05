@@ -379,5 +379,44 @@ input[type=submit]{
         margin-top: 13.4%;
         background: #EE9A00;
     }
+    /*TEXTBOX*/
+.wrapper{
+    max-width: 550px;
+    border-radius: 20px;
+    margin-right: 100px;
+    background: rgb(0, 0, 0, 0.7);
+    box-sizing: border-box;
+    padding: 40px;
+    color: #fff;
+    animation: drop 2s ease;
+}
+
+.wrapper h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+input[type=text],input[type=password],input[type=email]{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+input[type=submit]{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 0;
+    margin-top: 30px;
+    outline: none;
+    background: #EE9A00;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
 
 }
