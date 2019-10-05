@@ -49,11 +49,10 @@
                         <div class="wrapper">
                             <!--Textboxes-->
                             <h2>SignUp</h2>
-                            <form>
-                                <input type="text" placeholder="Username" required>
-                                <input type="email" placeholder="Email" required>
-                                <input type="password" placeholder="Password" required>
-                                <input type="submit" value="SignUp!">
+                            <form id="signupform">
+                                <input id="emailbox" type="email" placeholder="Email" required>
+                                <input id="passwordbox" type="password" placeholder="Password" required>
+                                <input id="signupbtn" type="submit" value="SignUp!">
                             </form>
                         </div>
                     </div>
@@ -70,5 +69,34 @@
             </div>
         </footer>
         <script src="app.js" type="text/javascript"></script>
+                <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC9Aq7w3h1RKck7EQ4msA38XWPMWshTxSE",
+            authDomain: "tuddle-inc.firebaseapp.com",
+            databaseURL: "https://tuddle-inc.firebaseio.com",
+            projectId: "tuddle-inc",
+            storageBucket: "tuddle-inc.appspot.com",
+            messagingSenderId: "164707882326",
+            appId: "1:164707882326:web:c9c9ec5ceb29d07c4af2f7"
+        };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    //DATABASE CONNECTION
+    var con = firebase.auth();
+    const signupform = document.querySelector("#signupform");
+    //Get data from forms
+    signupform.addEventListener('submit',(e)=>{
+        e.preventDefault();
+
+        console.log();
+    });
+    </script>
     </body>
 </html>
