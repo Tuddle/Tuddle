@@ -58,8 +58,7 @@ ul li .homebtn:first-child{
 }
 
 .tuddleLogo{
-    height: 50px;
-    width: 50px;
+    width: 14%;
     margin-left: 10%;
 }
 
@@ -372,6 +371,10 @@ ul li .homebtn:first-child{
 
 /*Web browser Sizes*/
 @media screen and (max-width: 1024px){
+    .tuddleLogo{
+        width: 50%;
+        margin-left: 10%;
+    }
     .line{
         width: 30px;
         height: 3px;
