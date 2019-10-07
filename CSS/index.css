@@ -72,6 +72,17 @@ ul li .homebtn:first-child{
     margin-left: 18px;
 }
 
+/*Social icons*/
+.icon-instagram{
+    margin-left: 3px;
+    color: white;
+    font-size: 20px;
+}
+.icon-facebook{
+    margin-left: 3px;
+    color: white;
+    font-size: 20px;
+}
 /*CONTENT*/
 .landing{
     display: inline;

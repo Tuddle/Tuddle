@@ -6,6 +6,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="CSS/signup.css">
+        <link rel="stylesheet" href="CSS/style.css">
         <link type="image/png" rel="shortIcon" href="images/logo.png">
     </head>
     <body>
@@ -54,6 +55,10 @@
                                 <input id="passwordbox" type="password" placeholder="Password" required>
                                 <input id="signupbtn" type="submit" value="SignUp!">
                             </form>
+                            <div class="success">
+                                <span>Signed Up Successfully</span>
+                                <div class="icon-check"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -87,13 +92,14 @@
     //DATABASE CONNECTION
     const auth = firebase.auth();
     const signupform = document.querySelector("#signupform");
+    var success = document.querySelector(".success");
     //Get data from forms
     signupform.addEventListener('submit',(e)=>{
         e.preventDefault();
         const email = signupform["emailbox"].value;
         const password = signupform["passwordbox"].value;
         auth.createUserWithEmailAndPassword(email,password).then(cred => {
-            alert("Thank you for creating an early bird account for Tuddle!");
+            success.style.display = 'flex';
             console.log(cred);
         }).catch((error)=>{
             alert(error.message);
