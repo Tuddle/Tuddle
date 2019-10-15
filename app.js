@@ -7,5 +7,5 @@ hamburger.addEventListener("click", ()=>{
 });
 
 function homePage(){
-    window.location.href = 'https://tuddle.github.io/tuddle/';
+    window.location.href = 'https://tuddle.dev/';
 }
